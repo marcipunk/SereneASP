@@ -14,6 +14,10 @@
         {
             try
             {
+                SqlConnections.GetConnectionString("CobraDEMO").Dialect =
+                    SqlServer2005Dialect.Instance;
+
+                SqlSettings.DefaultDialect = SqlServer2005Dialect.Instance;
                 SqlSettings.AutoQuotedIdentifiers = true;
                 Serenity.Web.CommonInitialization.Run();
 
