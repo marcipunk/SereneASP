@@ -273,6 +273,30 @@ namespace MVC
 
         }
 
+        public static class Cobrademo
+        {
+            public static class Account
+            {
+                public const string AccountIndex = "~/Modules/Cobrademo/Account/AccountIndex.cshtml";
+            }
+
+            public static class AccountName
+            {
+                public const string AccountNameIndex = "~/Modules/Cobrademo/AccountName/AccountNameIndex.cshtml";
+            }
+
+            public static class AccountSheetCore
+            {
+                public const string AccountSheetCoreIndex = "~/Modules/Cobrademo/AccountSheetCore/AccountSheetCoreIndex.cshtml";
+            }
+
+            public static class TaxYear
+            {
+                public const string TaxYearIndex = "~/Modules/Cobrademo/TaxYear/TaxYearIndex.cshtml";
+            }
+
+        }
+
         public static class Common
         {
             public static class Dashboard

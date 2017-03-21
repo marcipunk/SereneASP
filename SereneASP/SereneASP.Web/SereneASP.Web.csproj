@@ -1120,6 +1120,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ClientTypes.tt</DependentUpon>
     </Content>
+    <TypeScriptCompile Include="Imports\ServerTypings\Cobrademo.AccountColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Cobrademo.AccountNameColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Cobrademo.AccountSheetCoreColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Cobrademo.TaxYearColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Modules.Cobrademo.Account.LayerEnum.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="Modules\Administration\Language\LanguageDialog.ts" />
     <TypeScriptCompile Include="Modules\Administration\Language\LanguageGrid.ts" />
     <TypeScriptCompile Include="Modules\Administration\RolePermission\RolePermissionDialog.ts" />
@@ -1922,29 +1937,61 @@
     <TypeScriptCompile Include="Modules\Meeting\MeetingType\MeetingTypeDialog.ts" />
     <TypeScriptCompile Include="Scripts\typings\serenity\Serenity.CoreLib.d.ts" />
     <Content Include="Modules\Cobrademo\Account\AccountIndex.cshtml" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Cobrademo.AccountRow.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Cobrademo.AccountService.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Cobrademo.AccountForm.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Cobrademo.AccountRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Cobrademo.AccountService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Cobrademo.AccountForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="Modules\Cobrademo\Account\AccountGrid.ts" />
     <TypeScriptCompile Include="Modules\Cobrademo\Account\AccountDialog.ts" />
     <TypeScriptCompile Include="Modules\Cobrademo\Account\AccountEditor.ts" />
     <TypeScriptCompile Include="Modules\Cobrademo\Account\AccountEditorDialog.ts" />
     <Content Include="Modules\Cobrademo\AccountName\AccountNameIndex.cshtml" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Cobrademo.AccountNameRow.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Cobrademo.AccountNameService.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Cobrademo.AccountNameForm.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Cobrademo.AccountNameRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Cobrademo.AccountNameService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Cobrademo.AccountNameForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="Modules\Cobrademo\AccountName\AccountNameGrid.ts" />
     <TypeScriptCompile Include="Modules\Cobrademo\AccountName\AccountNameDialog.ts" />
     <TypeScriptCompile Include="Modules\Cobrademo\AccountName\AccountNameEditor.ts" />
     <TypeScriptCompile Include="Modules\Cobrademo\AccountName\AccountNameEditorDialog.ts" />
     <Content Include="Modules\Cobrademo\AccountSheetCore\AccountSheetCoreIndex.cshtml" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Cobrademo.AccountSheetCoreRow.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Cobrademo.AccountSheetCoreService.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Cobrademo.AccountSheetCoreForm.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Cobrademo.AccountSheetCoreRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Cobrademo.AccountSheetCoreService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Cobrademo.AccountSheetCoreForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="Modules\Cobrademo\AccountSheetCore\AccountSheetCoreGrid.ts" />
     <TypeScriptCompile Include="Modules\Cobrademo\AccountSheetCore\AccountSheetCoreDialog.ts" />
     <TypeScriptCompile Include="Modules\Cobrademo\AccountSheetCore\AccountSheetCoreEditor.ts" />
     <TypeScriptCompile Include="Modules\Cobrademo\AccountSheetCore\AccountSheetCoreEditorDialog.ts" />
+    <Content Include="Modules\Cobrademo\TaxYear\TaxYearIndex.cshtml" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Cobrademo.TaxYearRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Cobrademo.TaxYearService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Cobrademo.TaxYearForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Modules\Cobrademo\TaxYear\TaxYearGrid.ts" />
+    <TypeScriptCompile Include="Modules\Cobrademo\TaxYear\TaxYearDialog.ts" />
+    <TypeScriptCompile Include="Modules\Cobrademo\TaxYear\TaxYearEditor.ts" />
+    <TypeScriptCompile Include="Modules\Cobrademo\TaxYear\TaxYearEditorDialog.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
@@ -1961,6 +2008,18 @@
     <Compile Include="App_Start\SiteInitialization.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ClientTypes\Cobrademo.AccountEditorAttribute.cs">
+      <DependentUpon>ClientTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ClientTypes\Cobrademo.AccountNameEditorAttribute.cs">
+      <DependentUpon>ClientTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ClientTypes\Cobrademo.AccountSheetCoreEditorAttribute.cs">
+      <DependentUpon>ClientTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ClientTypes\Cobrademo.TaxYearEditorAttribute.cs">
+      <DependentUpon>ClientTypes.tt</DependentUpon>
     </Compile>
     <Compile Include="Modules\Administration\AdministrationNavigation.cs" />
     <Compile Include="Modules\Administration\Language\LanguageLookup.cs" />
@@ -2020,6 +2079,7 @@
     <Compile Include="Modules\BasicSamples\Grids\VSGalleryQA\VSGalleryQAPost.cs" />
     <Compile Include="Modules\BasicSamples\Grids\VSGalleryQA\VSGalleryQAThread.cs" />
     <Compile Include="Modules\BasicSamples\BasicSamplesNavigation.cs" />
+    <Compile Include="Modules\Cobrademo\Account\LayerEnum.cs" />
     <Compile Include="Modules\Common\Helpers\EmailHelper.cs" />
     <Compile Include="Modules\Common\Helpers\ExcelImportRequest.cs" />
     <Compile Include="Modules\Common\Dashboard\DashboardPageModel.cs" />
@@ -2356,6 +2416,12 @@
     <Compile Include="Modules\Cobrademo\AccountSheetCore\AccountSheetCoreRepository.cs" />
     <Compile Include="Modules\Cobrademo\AccountSheetCore\AccountSheetCoreEndpoint.cs" />
     <Compile Include="Modules\Cobrademo\AccountSheetCore\AccountSheetCorePage.cs" />
+    <Compile Include="Modules\Cobrademo\TaxYear\TaxYearRow.cs" />
+    <Compile Include="Modules\Cobrademo\TaxYear\TaxYearColumns.cs" />
+    <Compile Include="Modules\Cobrademo\TaxYear\TaxYearForm.cs" />
+    <Compile Include="Modules\Cobrademo\TaxYear\TaxYearRepository.cs" />
+    <Compile Include="Modules\Cobrademo\TaxYear\TaxYearEndpoint.cs" />
+    <Compile Include="Modules\Cobrademo\TaxYear\TaxYearPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

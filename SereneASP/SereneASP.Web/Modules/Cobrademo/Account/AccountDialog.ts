@@ -15,7 +15,7 @@ namespace SereneASP.Cobrademo {
 
         dialogOpen() {
                     super.dialogOpen();
-                   this.element.closest(".ui-dialog").find(".ui-icon-maximize-window").click();
+                   //this.element.closest(".ui-dialog").find(".ui-icon-maximize-window").click();
                  }
     }
 }

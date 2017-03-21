@@ -1,14 +1,12 @@
-﻿
-
-namespace SereneASP.Cobrademo {
+﻿namespace SereneASP.Cobrademo {
     export namespace AccountNameService {
         export const baseUrl = 'Cobrademo/AccountName';
 
-        export declare function Create(request: Serenity.SaveRequest<AccountNameRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        export declare function Update(request: Serenity.SaveRequest<AccountNameRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        export declare function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        export declare function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<AccountNameRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        export declare function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<AccountNameRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        export declare function Create(request: Serenity.SaveRequest<AccountNameRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        export declare function Update(request: Serenity.SaveRequest<AccountNameRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        export declare function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        export declare function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<AccountNameRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        export declare function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<AccountNameRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
 
         export namespace Methods {
             export declare const Create: string;
@@ -24,3 +22,4 @@ namespace SereneASP.Cobrademo {
         });
     }
 }
+

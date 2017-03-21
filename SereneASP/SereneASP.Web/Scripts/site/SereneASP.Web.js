@@ -544,7 +544,7 @@ var SereneASP;
         }(Serenity.PrefixedContext));
         AccountForm.formKey = 'Cobrademo.Account';
         Cobrademo.AccountForm = AccountForm;
-        [['AvatarId', function () { return Serenity.IntegerEditor; }], ['Timestamp', function () { return Serenity.StringEditor; }], ['TreasuryAccountId', function () { return Serenity.IntegerEditor; }], ['TaxYearId', function () { return Serenity.IntegerEditor; }], ['AncestorAccountId', function () { return Serenity.IntegerEditor; }], ['ParentAccountId', function () { return Serenity.IntegerEditor; }], ['Code', function () { return Serenity.StringEditor; }], ['Placeholder', function () { return Serenity.BooleanEditor; }], ['TaxRelated', function () { return Serenity.BooleanEditor; }], ['Hidden', function () { return Serenity.BooleanEditor; }], ['TypeId', function () { return Serenity.IntegerEditor; }], ['TransactionAccountId', function () { return Serenity.IntegerEditor; }], ['IsCollectorExpected', function () { return Serenity.BooleanEditor; }], ['ParallelAccountId', function () { return Serenity.IntegerEditor; }], ['LayerId', function () { return Serenity.IntegerEditor; }], ['IsPartnerExpected', function () { return Serenity.BooleanEditor; }]].forEach(function (x) { return Object.defineProperty(AccountForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+        [['Code', function () { return Serenity.StringEditor; }], ['TaxYearId', function () { return Serenity.IntegerEditor; }], ['TreasuryAccountId', function () { return Serenity.IntegerEditor; }], ['AncestorAccountId', function () { return Serenity.IntegerEditor; }], ['ParentAccountId', function () { return Serenity.IntegerEditor; }], ['Placeholder', function () { return Serenity.BooleanEditor; }], ['TaxRelated', function () { return Serenity.BooleanEditor; }], ['Hidden', function () { return Serenity.BooleanEditor; }], ['TransactionAccountId', function () { return Serenity.IntegerEditor; }], ['IsCollectorExpected', function () { return Serenity.BooleanEditor; }], ['ParallelAccountId', function () { return Serenity.IntegerEditor; }], ['LayerId', function () { return Serenity.EnumEditor; }], ['IsPartnerExpected', function () { return Serenity.BooleanEditor; }]].forEach(function (x) { return Object.defineProperty(AccountForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
     })(Cobrademo = SereneASP.Cobrademo || (SereneASP.Cobrademo = {}));
 })(SereneASP || (SereneASP = {}));
 var SereneASP;
@@ -575,7 +575,7 @@ var SereneASP;
             var Fields;
             (function (Fields) {
             })(Fields = AccountNameRow.Fields || (AccountNameRow.Fields = {}));
-            ['AccountId', 'LanguageId', 'Value', 'Note', 'AccountAvatarId', 'AccountTimestamp', 'AccountTreasuryAccountId', 'AccountTaxYearId', 'AccountAncestorAccountId', 'AccountParentAccountId', 'AccountCode', 'AccountPlaceholder', 'AccountTaxRelated', 'AccountHidden', 'AccountTypeId', 'AccountTransactionAccountId', 'AccountIsCollectorExpected', 'AccountParallelAccountId', 'AccountLayerId', 'AccountIsPartnerExpected', 'LanguageName', 'LanguageIsActive'].forEach(function (x) { return Fields[x] = x; });
+            ['AccountId', 'LanguageId', 'Value', 'Note', 'AccountAvatarId', 'AccountTaxYearId', 'AccountCode', 'LanguageName', 'LanguageIsActive'].forEach(function (x) { return Fields[x] = x; });
         })(AccountNameRow = Cobrademo.AccountNameRow || (Cobrademo.AccountNameRow = {}));
     })(Cobrademo = SereneASP.Cobrademo || (SereneASP.Cobrademo = {}));
 })(SereneASP || (SereneASP = {}));
@@ -608,7 +608,7 @@ var SereneASP;
             var Fields;
             (function (Fields) {
             })(Fields = AccountRow.Fields || (AccountRow.Fields = {}));
-            ['Id', 'AvatarId', 'Timestamp', 'TreasuryAccountId', 'TaxYearId', 'AncestorAccountId', 'ParentAccountId', 'Code', 'Placeholder', 'TaxRelated', 'Hidden', 'TypeId', 'TransactionAccountId', 'IsCollectorExpected', 'ParallelAccountId', 'LayerId', 'IsPartnerExpected', 'AvatarTableTypeId', 'AvatarGlobalId', 'TreasuryAccountNumber', 'TreasuryAccountName', 'TreasuryAccountTaxCode', 'TreasuryAccountValidFrom', 'TreasuryAccountValidUntil', 'TaxYearTimestamp', 'TaxYearParentTaxYearId', 'TaxYearCurrencyId', 'TaxYearTaxCurrencyId', 'TaxYearName', 'TaxYearYearNum', 'TaxYearStartDate', 'TaxYearEndDate', 'TaxYearVoucherFormat', 'TaxYearVoucherDigits', 'TaxYearVoucherSepFirst', 'TaxYearVoucherSepLast', 'TaxYearReferenceNumFormat', 'TaxYearReferenceNumDigits', 'TaxYearReferenceNumSepFirst', 'TaxYearReferenceNumSepLast', 'TaxYearIsClosed', 'TaxYearCurrencyEvaluationMode', 'TaxYearCurrencyExchangeType', 'TaxYearSalesExchanceType', 'TaxYearBookingExchangeType', 'TaxYearStockEvaluationMode', 'TaxYearFinanceLockDate', 'TaxYearParallelBooking', 'TaxYearLedgerRounding', 'TaxYearSecondaryAccountAllowed', 'TaxYearBankTransactionBooking', 'TaxYearCashAccounting', 'TaxYearLedgerItemCollectorToSecondaryAccount', 'TaxYearLedgerRoundingThresholdAmount', 'TaxYearApplyFinenceLockToStock', 'TaxYearCashAccountingVatCarryOver', 'TaxYearVatOffPeriodTransfer', 'TaxYearVatRateDifferenceTransfer', 'TaxYearVoucherShortYearNumber', 'TaxYearReferenceShortYearNumber', 'AncestorAccountAvatarId', 'AncestorAccountTimestamp', 'AncestorAccountTreasuryAccountId', 'AncestorAccountTaxYearId', 'AncestorAccountAncestorAccountId', 'AncestorAccountParentAccountId', 'AncestorAccountCode', 'AncestorAccountPlaceholder', 'AncestorAccountTaxRelated', 'AncestorAccountHidden', 'AncestorAccountTypeId', 'AncestorAccountTransactionAccountId', 'AncestorAccountIsCollectorExpected', 'AncestorAccountParallelAccountId', 'AncestorAccountLayerId', 'AncestorAccountIsPartnerExpected', 'ParentAccountAvatarId', 'ParentAccountTimestamp', 'ParentAccountTreasuryAccountId', 'ParentAccountTaxYearId', 'ParentAccountAncestorAccountId', 'ParentAccountParentAccountId', 'ParentAccountCode', 'ParentAccountPlaceholder', 'ParentAccountTaxRelated', 'ParentAccountHidden', 'ParentAccountTypeId', 'ParentAccountTransactionAccountId', 'ParentAccountIsCollectorExpected', 'ParentAccountParallelAccountId', 'ParentAccountLayerId', 'ParentAccountIsPartnerExpected', 'TransactionAccountAvatarId', 'TransactionAccountTimestamp', 'TransactionAccountTreasuryAccountId', 'TransactionAccountTaxYearId', 'TransactionAccountAncestorAccountId', 'TransactionAccountParentAccountId', 'TransactionAccountCode', 'TransactionAccountPlaceholder', 'TransactionAccountTaxRelated', 'TransactionAccountHidden', 'TransactionAccountTypeId', 'TransactionAccountTransactionAccountId', 'TransactionAccountIsCollectorExpected', 'TransactionAccountParallelAccountId', 'TransactionAccountLayerId', 'TransactionAccountIsPartnerExpected', 'ParallelAccountAvatarId', 'ParallelAccountTimestamp', 'ParallelAccountTreasuryAccountId', 'ParallelAccountTaxYearId', 'ParallelAccountAncestorAccountId', 'ParallelAccountParentAccountId', 'ParallelAccountCode', 'ParallelAccountPlaceholder', 'ParallelAccountTaxRelated', 'ParallelAccountHidden', 'ParallelAccountTypeId', 'ParallelAccountTransactionAccountId', 'ParallelAccountIsCollectorExpected', 'ParallelAccountParallelAccountId', 'ParallelAccountLayerId', 'ParallelAccountIsPartnerExpected'].forEach(function (x) { return Fields[x] = x; });
+            ['Id', 'AvatarId', 'Timestamp', 'TreasuryAccountId', 'TaxYearId', 'AncestorAccountId', 'ParentAccountId', 'Code', 'Placeholder', 'TaxRelated', 'Hidden', 'TypeId', 'TransactionAccountId', 'IsCollectorExpected', 'ParallelAccountId', 'LayerId', 'IsPartnerExpected', 'AvatarTableTypeId', 'AvatarGlobalId', 'TreasuryAccountNumber', 'TreasuryAccountName', 'TreasuryAccountTaxCode', 'TreasuryAccountValidFrom', 'TreasuryAccountValidUntil', 'TaxYearName', 'TaxYearYearNum', 'AncestorAccountCode', 'AncestorAccountPlaceholder', 'AncestorAccountTaxRelated', 'AncestorAccountHidden', 'AncestorAccountTypeId', 'AncestorAccountTransactionAccountId', 'AncestorAccountIsCollectorExpected', 'AncestorAccountParallelAccountId', 'AncestorAccountLayerId', 'AncestorAccountIsPartnerExpected', 'ParentAccountCode', 'TransactionAccountCode', 'ParallelAccountCode'].forEach(function (x) { return Fields[x] = x; });
         })(AccountRow = Cobrademo.AccountRow || (Cobrademo.AccountRow = {}));
     })(Cobrademo = SereneASP.Cobrademo || (SereneASP.Cobrademo = {}));
 })(SereneASP || (SereneASP = {}));
@@ -670,11 +670,60 @@ var SereneASP;
             var Methods;
             (function (Methods) {
             })(Methods = AccountSheetCoreService.Methods || (AccountSheetCoreService.Methods = {}));
-            ['Create', 'Update', 'Delete', 'Retrieve', 'List'].forEach(function (x) {
+            ['Retrieve', 'List'].forEach(function (x) {
                 AccountSheetCoreService[x] = function (r, s, o) { return Q.serviceRequest(AccountSheetCoreService.baseUrl + '/' + x, r, s, o); };
                 Methods[x] = AccountSheetCoreService.baseUrl + '/' + x;
             });
         })(AccountSheetCoreService = Cobrademo.AccountSheetCoreService || (Cobrademo.AccountSheetCoreService = {}));
+    })(Cobrademo = SereneASP.Cobrademo || (SereneASP.Cobrademo = {}));
+})(SereneASP || (SereneASP = {}));
+var SereneASP;
+(function (SereneASP) {
+    var Cobrademo;
+    (function (Cobrademo) {
+        var TaxYearForm = (function (_super) {
+            __extends(TaxYearForm, _super);
+            function TaxYearForm() {
+                return _super !== null && _super.apply(this, arguments) || this;
+            }
+            return TaxYearForm;
+        }(Serenity.PrefixedContext));
+        TaxYearForm.formKey = 'Cobrademo.TaxYear';
+        Cobrademo.TaxYearForm = TaxYearForm;
+        [['Timestamp', function () { return Serenity.StringEditor; }], ['ParentTaxYearId', function () { return Serenity.IntegerEditor; }], ['CurrencyId', function () { return Serenity.StringEditor; }], ['TaxCurrencyId', function () { return Serenity.StringEditor; }], ['Name', function () { return Serenity.StringEditor; }], ['YearNum', function () { return Serenity.IntegerEditor; }], ['StartDate', function () { return Serenity.DateEditor; }], ['EndDate', function () { return Serenity.DateEditor; }], ['VoucherFormat', function () { return Serenity.IntegerEditor; }], ['VoucherDigits', function () { return Serenity.IntegerEditor; }], ['VoucherSepFirst', function () { return Serenity.StringEditor; }], ['VoucherSepLast', function () { return Serenity.StringEditor; }], ['ReferenceNumFormat', function () { return Serenity.IntegerEditor; }], ['ReferenceNumDigits', function () { return Serenity.IntegerEditor; }], ['ReferenceNumSepFirst', function () { return Serenity.StringEditor; }], ['ReferenceNumSepLast', function () { return Serenity.StringEditor; }], ['IsClosed', function () { return Serenity.BooleanEditor; }], ['CurrencyEvaluationMode', function () { return Serenity.IntegerEditor; }], ['CurrencyExchangeType', function () { return Serenity.IntegerEditor; }], ['SalesExchanceType', function () { return Serenity.IntegerEditor; }], ['BookingExchangeType', function () { return Serenity.IntegerEditor; }], ['StockEvaluationMode', function () { return Serenity.IntegerEditor; }], ['FinanceLockDate', function () { return Serenity.DateEditor; }], ['ParallelBooking', function () { return Serenity.BooleanEditor; }], ['LedgerRounding', function () { return Serenity.BooleanEditor; }], ['SecondaryAccountAllowed', function () { return Serenity.BooleanEditor; }], ['BankTransactionBooking', function () { return Serenity.BooleanEditor; }], ['CashAccounting', function () { return Serenity.BooleanEditor; }], ['LedgerItemCollectorToSecondaryAccount', function () { return Serenity.BooleanEditor; }], ['LedgerRoundingThresholdAmount', function () { return Serenity.DecimalEditor; }], ['ApplyFinenceLockToStock', function () { return Serenity.BooleanEditor; }], ['CashAccountingVatCarryOver', function () { return Serenity.BooleanEditor; }], ['VatOffPeriodTransfer', function () { return Serenity.BooleanEditor; }], ['VatRateDifferenceTransfer', function () { return Serenity.BooleanEditor; }], ['VoucherShortYearNumber', function () { return Serenity.BooleanEditor; }], ['ReferenceShortYearNumber', function () { return Serenity.BooleanEditor; }]].forEach(function (x) { return Object.defineProperty(TaxYearForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+    })(Cobrademo = SereneASP.Cobrademo || (SereneASP.Cobrademo = {}));
+})(SereneASP || (SereneASP = {}));
+var SereneASP;
+(function (SereneASP) {
+    var Cobrademo;
+    (function (Cobrademo) {
+        var TaxYearRow;
+        (function (TaxYearRow) {
+            TaxYearRow.idProperty = 'Id';
+            TaxYearRow.nameProperty = 'CurrencyId';
+            TaxYearRow.localTextPrefix = 'Cobrademo.TaxYear';
+            var Fields;
+            (function (Fields) {
+            })(Fields = TaxYearRow.Fields || (TaxYearRow.Fields = {}));
+            ['Id', 'Timestamp', 'ParentTaxYearId', 'CurrencyId', 'TaxCurrencyId', 'Name', 'YearNum', 'StartDate', 'EndDate', 'VoucherFormat', 'VoucherDigits', 'VoucherSepFirst', 'VoucherSepLast', 'ReferenceNumFormat', 'ReferenceNumDigits', 'ReferenceNumSepFirst', 'ReferenceNumSepLast', 'IsClosed', 'CurrencyEvaluationMode', 'CurrencyExchangeType', 'SalesExchanceType', 'BookingExchangeType', 'StockEvaluationMode', 'FinanceLockDate', 'ParallelBooking', 'LedgerRounding', 'SecondaryAccountAllowed', 'BankTransactionBooking', 'CashAccounting', 'LedgerItemCollectorToSecondaryAccount', 'LedgerRoundingThresholdAmount', 'ApplyFinenceLockToStock', 'CashAccountingVatCarryOver', 'VatOffPeriodTransfer', 'VatRateDifferenceTransfer', 'VoucherShortYearNumber', 'ReferenceShortYearNumber', 'ParentTaxYearTimestamp', 'ParentTaxYearParentTaxYearId', 'ParentTaxYearCurrencyId', 'ParentTaxYearTaxCurrencyId', 'ParentTaxYearName', 'ParentTaxYearYearNum', 'ParentTaxYearStartDate', 'ParentTaxYearEndDate', 'ParentTaxYearVoucherFormat', 'ParentTaxYearVoucherDigits', 'ParentTaxYearVoucherSepFirst', 'ParentTaxYearVoucherSepLast', 'ParentTaxYearReferenceNumFormat', 'ParentTaxYearReferenceNumDigits', 'ParentTaxYearReferenceNumSepFirst', 'ParentTaxYearReferenceNumSepLast', 'ParentTaxYearIsClosed', 'ParentTaxYearCurrencyEvaluationMode', 'ParentTaxYearCurrencyExchangeType', 'ParentTaxYearSalesExchanceType', 'ParentTaxYearBookingExchangeType', 'ParentTaxYearStockEvaluationMode', 'ParentTaxYearFinanceLockDate', 'ParentTaxYearParallelBooking', 'ParentTaxYearLedgerRounding', 'ParentTaxYearSecondaryAccountAllowed', 'ParentTaxYearBankTransactionBooking', 'ParentTaxYearCashAccounting', 'ParentTaxYearLedgerItemCollectorToSecondaryAccount', 'ParentTaxYearLedgerRoundingThresholdAmount', 'ParentTaxYearApplyFinenceLockToStock', 'ParentTaxYearCashAccountingVatCarryOver', 'ParentTaxYearVatOffPeriodTransfer', 'ParentTaxYearVatRateDifferenceTransfer', 'ParentTaxYearVoucherShortYearNumber', 'ParentTaxYearReferenceShortYearNumber', 'CurrencyName', 'CurrencyIsActive', 'CurrencyEndDate', 'CurrencyMinAmount', 'CurrencyTimestamp', 'CurrencyAvatarId', 'TaxCurrencyName', 'TaxCurrencyIsActive', 'TaxCurrencyEndDate', 'TaxCurrencyMinAmount', 'TaxCurrencyTimestamp', 'TaxCurrencyAvatarId'].forEach(function (x) { return Fields[x] = x; });
+        })(TaxYearRow = Cobrademo.TaxYearRow || (Cobrademo.TaxYearRow = {}));
+    })(Cobrademo = SereneASP.Cobrademo || (SereneASP.Cobrademo = {}));
+})(SereneASP || (SereneASP = {}));
+var SereneASP;
+(function (SereneASP) {
+    var Cobrademo;
+    (function (Cobrademo) {
+        var TaxYearService;
+        (function (TaxYearService) {
+            TaxYearService.baseUrl = 'Cobrademo/TaxYear';
+            var Methods;
+            (function (Methods) {
+            })(Methods = TaxYearService.Methods || (TaxYearService.Methods = {}));
+            ['Create', 'Update', 'Delete', 'Retrieve', 'List'].forEach(function (x) {
+                TaxYearService[x] = function (r, s, o) { return Q.serviceRequest(TaxYearService.baseUrl + '/' + x, r, s, o); };
+                Methods[x] = TaxYearService.baseUrl + '/' + x;
+            });
+        })(TaxYearService = Cobrademo.TaxYearService || (Cobrademo.TaxYearService = {}));
     })(Cobrademo = SereneASP.Cobrademo || (SereneASP.Cobrademo = {}));
 })(SereneASP || (SereneASP = {}));
 var SereneASP;
@@ -6612,7 +6661,7 @@ var SereneASP;
             AccountDialog.prototype.getService = function () { return Cobrademo.AccountService.baseUrl; };
             AccountDialog.prototype.dialogOpen = function () {
                 _super.prototype.dialogOpen.call(this);
-                this.element.closest(".ui-dialog").find(".ui-icon-maximize-window").click();
+                //this.element.closest(".ui-dialog").find(".ui-icon-maximize-window").click();
             };
             return AccountDialog;
         }(Serenity.EntityDialog));
@@ -6881,6 +6930,103 @@ var SereneASP;
             Serenity.Decorators.registerClass()
         ], AccountSheetCoreGrid);
         Cobrademo.AccountSheetCoreGrid = AccountSheetCoreGrid;
+    })(Cobrademo = SereneASP.Cobrademo || (SereneASP.Cobrademo = {}));
+})(SereneASP || (SereneASP = {}));
+var SereneASP;
+(function (SereneASP) {
+    var Cobrademo;
+    (function (Cobrademo) {
+        var TaxYearDialog = (function (_super) {
+            __extends(TaxYearDialog, _super);
+            function TaxYearDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Cobrademo.TaxYearForm(_this.idPrefix);
+                return _this;
+            }
+            TaxYearDialog.prototype.getFormKey = function () { return Cobrademo.TaxYearForm.formKey; };
+            TaxYearDialog.prototype.getIdProperty = function () { return Cobrademo.TaxYearRow.idProperty; };
+            TaxYearDialog.prototype.getLocalTextPrefix = function () { return Cobrademo.TaxYearRow.localTextPrefix; };
+            TaxYearDialog.prototype.getNameProperty = function () { return Cobrademo.TaxYearRow.nameProperty; };
+            TaxYearDialog.prototype.getService = function () { return Cobrademo.TaxYearService.baseUrl; };
+            TaxYearDialog.prototype.dialogOpen = function () {
+                _super.prototype.dialogOpen.call(this);
+                this.element.closest(".ui-dialog").find(".ui-icon-maximize-window").click();
+            };
+            return TaxYearDialog;
+        }(Serenity.EntityDialog));
+        TaxYearDialog = __decorate([
+            Serenity.Decorators.registerClass(),
+            Serenity.Decorators.responsive(),
+            Serenity.Decorators.maximizable()
+        ], TaxYearDialog);
+        Cobrademo.TaxYearDialog = TaxYearDialog;
+    })(Cobrademo = SereneASP.Cobrademo || (SereneASP.Cobrademo = {}));
+})(SereneASP || (SereneASP = {}));
+/// <reference path="../../Common/Helpers/GridEditorBase.ts" />
+var SereneASP;
+(function (SereneASP) {
+    var Cobrademo;
+    (function (Cobrademo) {
+        var TaxYearEditor = (function (_super) {
+            __extends(TaxYearEditor, _super);
+            function TaxYearEditor(container) {
+                return _super.call(this, container) || this;
+            }
+            TaxYearEditor.prototype.getColumnsKey = function () { return 'Cobrademo.TaxYear'; };
+            TaxYearEditor.prototype.getDialogType = function () { return Cobrademo.TaxYearEditorDialog; };
+            TaxYearEditor.prototype.getLocalTextPrefix = function () { return Cobrademo.TaxYearRow.localTextPrefix; };
+            return TaxYearEditor;
+        }(SereneASP.Common.GridEditorBase));
+        TaxYearEditor = __decorate([
+            Serenity.Decorators.registerClass()
+        ], TaxYearEditor);
+        Cobrademo.TaxYearEditor = TaxYearEditor;
+    })(Cobrademo = SereneASP.Cobrademo || (SereneASP.Cobrademo = {}));
+})(SereneASP || (SereneASP = {}));
+/// <reference path="../../Common/Helpers/GridEditorDialog.ts" />
+var SereneASP;
+(function (SereneASP) {
+    var Cobrademo;
+    (function (Cobrademo) {
+        var TaxYearEditorDialog = (function (_super) {
+            __extends(TaxYearEditorDialog, _super);
+            function TaxYearEditorDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Cobrademo.TaxYearForm(_this.idPrefix);
+                return _this;
+            }
+            TaxYearEditorDialog.prototype.getFormKey = function () { return Cobrademo.TaxYearForm.formKey; };
+            TaxYearEditorDialog.prototype.getLocalTextPrefix = function () { return Cobrademo.TaxYearRow.localTextPrefix; };
+            TaxYearEditorDialog.prototype.getNameProperty = function () { return Cobrademo.TaxYearRow.nameProperty; };
+            return TaxYearEditorDialog;
+        }(SereneASP.Common.GridEditorDialog));
+        TaxYearEditorDialog = __decorate([
+            Serenity.Decorators.registerClass(),
+            Serenity.Decorators.responsive()
+        ], TaxYearEditorDialog);
+        Cobrademo.TaxYearEditorDialog = TaxYearEditorDialog;
+    })(Cobrademo = SereneASP.Cobrademo || (SereneASP.Cobrademo = {}));
+})(SereneASP || (SereneASP = {}));
+var SereneASP;
+(function (SereneASP) {
+    var Cobrademo;
+    (function (Cobrademo) {
+        var TaxYearGrid = (function (_super) {
+            __extends(TaxYearGrid, _super);
+            function TaxYearGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            TaxYearGrid.prototype.getColumnsKey = function () { return 'Cobrademo.TaxYear'; };
+            TaxYearGrid.prototype.getDialogType = function () { return Cobrademo.TaxYearDialog; };
+            TaxYearGrid.prototype.getIdProperty = function () { return Cobrademo.TaxYearRow.idProperty; };
+            TaxYearGrid.prototype.getLocalTextPrefix = function () { return Cobrademo.TaxYearRow.localTextPrefix; };
+            TaxYearGrid.prototype.getService = function () { return Cobrademo.TaxYearService.baseUrl; };
+            return TaxYearGrid;
+        }(Serenity.EntityGrid));
+        TaxYearGrid = __decorate([
+            Serenity.Decorators.registerClass()
+        ], TaxYearGrid);
+        Cobrademo.TaxYearGrid = TaxYearGrid;
     })(Cobrademo = SereneASP.Cobrademo || (SereneASP.Cobrademo = {}));
 })(SereneASP || (SereneASP = {}));
 var SereneASP;
@@ -9467,5 +9613,23 @@ var SereneASP;
         ], ContactGrid);
         Organization.ContactGrid = ContactGrid;
     })(Organization = SereneASP.Organization || (SereneASP.Organization = {}));
+})(SereneASP || (SereneASP = {}));
+var SereneASP;
+(function (SereneASP) {
+    var Modules;
+    (function (Modules) {
+        var Cobrademo;
+        (function (Cobrademo) {
+            var Account;
+            (function (Account) {
+                var LayerEnum;
+                (function (LayerEnum) {
+                    LayerEnum[LayerEnum["Elsodleges"] = 1] = "Elsodleges";
+                    LayerEnum[LayerEnum["Parhuzamos"] = 2] = "Parhuzamos";
+                })(LayerEnum = Account.LayerEnum || (Account.LayerEnum = {}));
+                Serenity.Decorators.registerEnum(LayerEnum, 'Account.LayerId');
+            })(Account = Cobrademo.Account || (Cobrademo.Account = {}));
+        })(Cobrademo = Modules.Cobrademo || (Modules.Cobrademo = {}));
+    })(Modules = SereneASP.Modules || (SereneASP.Modules = {}));
 })(SereneASP || (SereneASP = {}));
 //# sourceMappingURL=SereneASP.Web.js.map

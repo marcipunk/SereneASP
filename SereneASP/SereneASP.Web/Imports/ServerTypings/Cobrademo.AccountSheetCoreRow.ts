@@ -1,5 +1,4 @@
-﻿
-namespace SereneASP.Cobrademo {
+﻿namespace SereneASP.Cobrademo {
     export interface AccountSheetCoreRow {
         TaxYearId?: number;
         LayerId?: number;
@@ -48,46 +47,46 @@ namespace SereneASP.Cobrademo {
         export const localTextPrefix = 'Cobrademo.AccountSheetCore';
 
         export namespace Fields {
-            export declare const TaxYearId;
-            export declare const LayerId;
-            export declare const AccountId;
-            export declare const BookingDate;
-            export declare const CompletionDate;
-            export declare const TabletypeId;
-            export declare const FileId;
-            export declare const FileAvatarId;
-            export declare const FileGeneratedSign;
-            export declare const FileUserSign;
-            export declare const OrdinalNumber;
-            export declare const SrcAvatarId;
-            export declare const LedgerItemId;
-            export declare const ItemTypeId;
-            export declare const SrcFinanceLinkId;
-            export declare const EventTypeId;
-            export declare const PartnerId;
-            export declare const ReferenceNumber;
-            export declare const VoucherNum;
-            export declare const LedgerCurrencyId;
-            export declare const LedgerRate;
-            export declare const LedgerName;
-            export declare const LedgerItemCurrencyId;
-            export declare const LedgerItemRate;
-            export declare const LedgerItemName;
-            export declare const Side;
-            export declare const OriginalAmount;
-            export declare const Amount;
-            export declare const OriginalDebitAmount;
-            export declare const OriginalCreditAmount;
-            export declare const DebitAmount;
-            export declare const CreditAmount;
-            export declare const AccountCode;
-            export declare const ContraAccounts;
-            export declare const IsFinalized;
-            export declare const IsActive;
-            export declare const AccountInTaxYear;
-            export declare const AccountInLayer;
-            export declare const BookingDateInTaxYear;
-            export declare const IsCurrent;
+            export declare const TaxYearId: string;
+            export declare const LayerId: string;
+            export declare const AccountId: string;
+            export declare const BookingDate: string;
+            export declare const CompletionDate: string;
+            export declare const TabletypeId: string;
+            export declare const FileId: string;
+            export declare const FileAvatarId: string;
+            export declare const FileGeneratedSign: string;
+            export declare const FileUserSign: string;
+            export declare const OrdinalNumber: string;
+            export declare const SrcAvatarId: string;
+            export declare const LedgerItemId: string;
+            export declare const ItemTypeId: string;
+            export declare const SrcFinanceLinkId: string;
+            export declare const EventTypeId: string;
+            export declare const PartnerId: string;
+            export declare const ReferenceNumber: string;
+            export declare const VoucherNum: string;
+            export declare const LedgerCurrencyId: string;
+            export declare const LedgerRate: string;
+            export declare const LedgerName: string;
+            export declare const LedgerItemCurrencyId: string;
+            export declare const LedgerItemRate: string;
+            export declare const LedgerItemName: string;
+            export declare const Side: string;
+            export declare const OriginalAmount: string;
+            export declare const Amount: string;
+            export declare const OriginalDebitAmount: string;
+            export declare const OriginalCreditAmount: string;
+            export declare const DebitAmount: string;
+            export declare const CreditAmount: string;
+            export declare const AccountCode: string;
+            export declare const ContraAccounts: string;
+            export declare const IsFinalized: string;
+            export declare const IsActive: string;
+            export declare const AccountInTaxYear: string;
+            export declare const AccountInLayer: string;
+            export declare const BookingDateInTaxYear: string;
+            export declare const IsCurrent: string;
         }
 
         ['TaxYearId', 'LayerId', 'AccountId', 'BookingDate', 'CompletionDate', 'TabletypeId', 'FileId', 'FileAvatarId', 'FileGeneratedSign', 'FileUserSign', 'OrdinalNumber', 'SrcAvatarId', 'LedgerItemId', 'ItemTypeId', 'SrcFinanceLinkId', 'EventTypeId', 'PartnerId', 'ReferenceNumber', 'VoucherNum', 'LedgerCurrencyId', 'LedgerRate', 'LedgerName', 'LedgerItemCurrencyId', 'LedgerItemRate', 'LedgerItemName', 'Side', 'OriginalAmount', 'Amount', 'OriginalDebitAmount', 'OriginalCreditAmount', 'DebitAmount', 'CreditAmount', 'AccountCode', 'ContraAccounts', 'IsFinalized', 'IsActive', 'AccountInTaxYear', 'AccountInLayer', 'BookingDateInTaxYear', 'IsCurrent'].forEach(x => (<any>Fields)[x] = x);

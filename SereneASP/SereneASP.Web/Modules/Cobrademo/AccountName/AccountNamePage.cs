@@ -1,6 +1,6 @@
 ﻿
 
-[assembly:Serenity.Navigation.NavigationLink(int.MaxValue, "Cobrademo/AccountName", typeof(SereneASP.Cobrademo.Pages.AccountNameController))]
+[assembly:Serenity.Navigation.NavigationLink(int.MaxValue, "Cobra Demo/Account's Names", typeof(SereneASP.Cobrademo.Pages.AccountNameController))]
 
 namespace SereneASP.Cobrademo.Pages
 {
@@ -8,7 +8,7 @@ namespace SereneASP.Cobrademo.Pages
     using Serenity.Web;
     using System.Web.Mvc;
 
-    [RoutePrefix("Cobrademo/AccountName"), Route("{action=index}")]
+    [RoutePrefix("cobrademo/AccountName"), Route("{action=index}")]
     [PageAuthorize(typeof(Entities.AccountNameRow))]
     public class AccountNameController : Controller
     {

@@ -8226,3 +8226,9 @@ section.content > .s-DataGrid {
 .s-Cobrademo-AccountSheetCoreDialog .caption {
   width: 150px;
 }
+.s-Cobrademo-TaxYearDialog > .size {
+  width: 650px;
+}
+.s-Cobrademo-TaxYearDialog .caption {
+  width: 150px;
+}

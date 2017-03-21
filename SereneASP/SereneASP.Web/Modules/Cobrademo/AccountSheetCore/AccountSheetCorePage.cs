@@ -1,6 +1,6 @@
 ﻿
 
-[assembly:Serenity.Navigation.NavigationLink(int.MaxValue, "Cobrademo/AccountSheetCore", typeof(SereneASP.Cobrademo.Pages.AccountSheetCoreController))]
+[assembly:Serenity.Navigation.NavigationLink(int.MaxValue, "Cobra Demo/Account Sheet Core", typeof(SereneASP.Cobrademo.Pages.AccountSheetCoreController))]
 
 namespace SereneASP.Cobrademo.Pages
 {
@@ -8,7 +8,7 @@ namespace SereneASP.Cobrademo.Pages
     using Serenity.Web;
     using System.Web.Mvc;
 
-    [RoutePrefix("Cobrademo/AccountSheetCore"), Route("{action=index}")]
+    [RoutePrefix("cobrademo/AccountSheetCore"), Route("{action=index}")]
     [PageAuthorize(typeof(Entities.AccountSheetCoreRow))]
     public class AccountSheetCoreController : Controller
     {

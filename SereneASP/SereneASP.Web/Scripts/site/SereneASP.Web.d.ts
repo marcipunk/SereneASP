@@ -597,21 +597,18 @@ declare namespace SereneASP.Cobrademo {
         static formKey: string;
     }
     interface AccountForm {
-        AvatarId: Serenity.IntegerEditor;
-        Timestamp: Serenity.StringEditor;
-        TreasuryAccountId: Serenity.IntegerEditor;
+        Code: Serenity.StringEditor;
         TaxYearId: Serenity.IntegerEditor;
+        TreasuryAccountId: Serenity.IntegerEditor;
         AncestorAccountId: Serenity.IntegerEditor;
         ParentAccountId: Serenity.IntegerEditor;
-        Code: Serenity.StringEditor;
         Placeholder: Serenity.BooleanEditor;
         TaxRelated: Serenity.BooleanEditor;
         Hidden: Serenity.BooleanEditor;
-        TypeId: Serenity.IntegerEditor;
         TransactionAccountId: Serenity.IntegerEditor;
         IsCollectorExpected: Serenity.BooleanEditor;
         ParallelAccountId: Serenity.IntegerEditor;
-        LayerId: Serenity.IntegerEditor;
+        LayerId: Serenity.EnumEditor;
         IsPartnerExpected: Serenity.BooleanEditor;
     }
 }
@@ -632,21 +629,8 @@ declare namespace SereneASP.Cobrademo {
         Value?: string;
         Note?: string;
         AccountAvatarId?: number;
-        AccountTimestamp?: number[];
-        AccountTreasuryAccountId?: number;
         AccountTaxYearId?: number;
-        AccountAncestorAccountId?: number;
-        AccountParentAccountId?: number;
         AccountCode?: string;
-        AccountPlaceholder?: boolean;
-        AccountTaxRelated?: boolean;
-        AccountHidden?: boolean;
-        AccountTypeId?: number;
-        AccountTransactionAccountId?: number;
-        AccountIsCollectorExpected?: boolean;
-        AccountParallelAccountId?: number;
-        AccountLayerId?: number;
-        AccountIsPartnerExpected?: boolean;
         LanguageName?: string;
         LanguageIsActive?: boolean;
     }
@@ -655,26 +639,13 @@ declare namespace SereneASP.Cobrademo {
         const nameProperty = "LanguageId";
         const localTextPrefix = "Cobrademo.AccountName";
         namespace Fields {
-            const AccountId: any;
-            const LanguageId: any;
-            const Value: any;
-            const Note: any;
+            const AccountId: string;
+            const LanguageId: string;
+            const Value: string;
+            const Note: string;
             const AccountAvatarId: string;
-            const AccountTimestamp: string;
-            const AccountTreasuryAccountId: string;
             const AccountTaxYearId: string;
-            const AccountAncestorAccountId: string;
-            const AccountParentAccountId: string;
             const AccountCode: string;
-            const AccountPlaceholder: string;
-            const AccountTaxRelated: string;
-            const AccountHidden: string;
-            const AccountTypeId: string;
-            const AccountTransactionAccountId: string;
-            const AccountIsCollectorExpected: string;
-            const AccountParallelAccountId: string;
-            const AccountLayerId: string;
-            const AccountIsPartnerExpected: string;
             const LanguageName: string;
             const LanguageIsActive: string;
         }
@@ -683,11 +654,11 @@ declare namespace SereneASP.Cobrademo {
 declare namespace SereneASP.Cobrademo {
     namespace AccountNameService {
         const baseUrl = "Cobrademo/AccountName";
-        function Create(request: Serenity.SaveRequest<AccountNameRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Update(request: Serenity.SaveRequest<AccountNameRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<AccountNameRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<AccountNameRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Create(request: Serenity.SaveRequest<AccountNameRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<AccountNameRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<AccountNameRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<AccountNameRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
         namespace Methods {
             const Create: string;
             const Update: string;
@@ -714,7 +685,7 @@ declare namespace SereneASP.Cobrademo {
         TransactionAccountId?: number;
         IsCollectorExpected?: boolean;
         ParallelAccountId?: number;
-        LayerId?: number;
+        LayerId?: Modules.Cobrademo.Account.LayerEnum;
         IsPartnerExpected?: boolean;
         AvatarTableTypeId?: number;
         AvatarGlobalId?: string;
@@ -723,48 +694,8 @@ declare namespace SereneASP.Cobrademo {
         TreasuryAccountTaxCode?: string;
         TreasuryAccountValidFrom?: string;
         TreasuryAccountValidUntil?: string;
-        TaxYearTimestamp?: number[];
-        TaxYearParentTaxYearId?: number;
-        TaxYearCurrencyId?: string;
-        TaxYearTaxCurrencyId?: string;
         TaxYearName?: string;
         TaxYearYearNum?: number;
-        TaxYearStartDate?: string;
-        TaxYearEndDate?: string;
-        TaxYearVoucherFormat?: number;
-        TaxYearVoucherDigits?: number;
-        TaxYearVoucherSepFirst?: string;
-        TaxYearVoucherSepLast?: string;
-        TaxYearReferenceNumFormat?: number;
-        TaxYearReferenceNumDigits?: number;
-        TaxYearReferenceNumSepFirst?: string;
-        TaxYearReferenceNumSepLast?: string;
-        TaxYearIsClosed?: boolean;
-        TaxYearCurrencyEvaluationMode?: number;
-        TaxYearCurrencyExchangeType?: number;
-        TaxYearSalesExchanceType?: number;
-        TaxYearBookingExchangeType?: number;
-        TaxYearStockEvaluationMode?: number;
-        TaxYearFinanceLockDate?: string;
-        TaxYearParallelBooking?: boolean;
-        TaxYearLedgerRounding?: boolean;
-        TaxYearSecondaryAccountAllowed?: boolean;
-        TaxYearBankTransactionBooking?: boolean;
-        TaxYearCashAccounting?: boolean;
-        TaxYearLedgerItemCollectorToSecondaryAccount?: boolean;
-        TaxYearLedgerRoundingThresholdAmount?: number;
-        TaxYearApplyFinenceLockToStock?: boolean;
-        TaxYearCashAccountingVatCarryOver?: boolean;
-        TaxYearVatOffPeriodTransfer?: boolean;
-        TaxYearVatRateDifferenceTransfer?: boolean;
-        TaxYearVoucherShortYearNumber?: boolean;
-        TaxYearReferenceShortYearNumber?: boolean;
-        AncestorAccountAvatarId?: number;
-        AncestorAccountTimestamp?: number[];
-        AncestorAccountTreasuryAccountId?: number;
-        AncestorAccountTaxYearId?: number;
-        AncestorAccountAncestorAccountId?: number;
-        AncestorAccountParentAccountId?: number;
         AncestorAccountCode?: string;
         AncestorAccountPlaceholder?: boolean;
         AncestorAccountTaxRelated?: boolean;
@@ -775,77 +706,32 @@ declare namespace SereneASP.Cobrademo {
         AncestorAccountParallelAccountId?: number;
         AncestorAccountLayerId?: number;
         AncestorAccountIsPartnerExpected?: boolean;
-        ParentAccountAvatarId?: number;
-        ParentAccountTimestamp?: number[];
-        ParentAccountTreasuryAccountId?: number;
-        ParentAccountTaxYearId?: number;
-        ParentAccountAncestorAccountId?: number;
-        ParentAccountParentAccountId?: number;
         ParentAccountCode?: string;
-        ParentAccountPlaceholder?: boolean;
-        ParentAccountTaxRelated?: boolean;
-        ParentAccountHidden?: boolean;
-        ParentAccountTypeId?: number;
-        ParentAccountTransactionAccountId?: number;
-        ParentAccountIsCollectorExpected?: boolean;
-        ParentAccountParallelAccountId?: number;
-        ParentAccountLayerId?: number;
-        ParentAccountIsPartnerExpected?: boolean;
-        TransactionAccountAvatarId?: number;
-        TransactionAccountTimestamp?: number[];
-        TransactionAccountTreasuryAccountId?: number;
-        TransactionAccountTaxYearId?: number;
-        TransactionAccountAncestorAccountId?: number;
-        TransactionAccountParentAccountId?: number;
         TransactionAccountCode?: string;
-        TransactionAccountPlaceholder?: boolean;
-        TransactionAccountTaxRelated?: boolean;
-        TransactionAccountHidden?: boolean;
-        TransactionAccountTypeId?: number;
-        TransactionAccountTransactionAccountId?: number;
-        TransactionAccountIsCollectorExpected?: boolean;
-        TransactionAccountParallelAccountId?: number;
-        TransactionAccountLayerId?: number;
-        TransactionAccountIsPartnerExpected?: boolean;
-        ParallelAccountAvatarId?: number;
-        ParallelAccountTimestamp?: number[];
-        ParallelAccountTreasuryAccountId?: number;
-        ParallelAccountTaxYearId?: number;
-        ParallelAccountAncestorAccountId?: number;
-        ParallelAccountParentAccountId?: number;
         ParallelAccountCode?: string;
-        ParallelAccountPlaceholder?: boolean;
-        ParallelAccountTaxRelated?: boolean;
-        ParallelAccountHidden?: boolean;
-        ParallelAccountTypeId?: number;
-        ParallelAccountTransactionAccountId?: number;
-        ParallelAccountIsCollectorExpected?: boolean;
-        ParallelAccountParallelAccountId?: number;
-        ParallelAccountLayerId?: number;
-        ParallelAccountIsPartnerExpected?: boolean;
     }
     namespace AccountRow {
         const idProperty = "Id";
         const nameProperty = "Code";
         const localTextPrefix = "Cobrademo.Account";
         namespace Fields {
-            const Id: any;
-            const AvatarId: any;
-            const Timestamp: any;
-            const TreasuryAccountId: any;
-            const TaxYearId: any;
-            const AncestorAccountId: any;
-            const ParentAccountId: any;
-            const Code: any;
-            const Placeholder: any;
-            const TaxRelated: any;
-            const Hidden: any;
-            const TypeId: any;
-            const TransactionAccountId: any;
-            const IsCollectorExpected: any;
-            const ParallelAccountId: any;
-            const LayerId: any;
-            const IsPartnerExpected: any;
+            const Id: string;
+            const AvatarId: string;
+            const Timestamp: string;
+            const TreasuryAccountId: string;
+            const TaxYearId: string;
+            const AncestorAccountId: string;
+            const ParentAccountId: string;
+            const Code: string;
+            const Placeholder: string;
+            const TaxRelated: string;
+            const Hidden: string;
+            const TypeId: string;
+            const TransactionAccountId: string;
+            const IsCollectorExpected: string;
+            const ParallelAccountId: string;
+            const LayerId: string;
+            const IsPartnerExpected: string;
             const AvatarTableTypeId: string;
             const AvatarGlobalId: string;
             const TreasuryAccountNumber: string;
@@ -853,48 +739,8 @@ declare namespace SereneASP.Cobrademo {
             const TreasuryAccountTaxCode: string;
             const TreasuryAccountValidFrom: string;
             const TreasuryAccountValidUntil: string;
-            const TaxYearTimestamp: string;
-            const TaxYearParentTaxYearId: string;
-            const TaxYearCurrencyId: string;
-            const TaxYearTaxCurrencyId: string;
             const TaxYearName: string;
             const TaxYearYearNum: string;
-            const TaxYearStartDate: string;
-            const TaxYearEndDate: string;
-            const TaxYearVoucherFormat: string;
-            const TaxYearVoucherDigits: string;
-            const TaxYearVoucherSepFirst: string;
-            const TaxYearVoucherSepLast: string;
-            const TaxYearReferenceNumFormat: string;
-            const TaxYearReferenceNumDigits: string;
-            const TaxYearReferenceNumSepFirst: string;
-            const TaxYearReferenceNumSepLast: string;
-            const TaxYearIsClosed: string;
-            const TaxYearCurrencyEvaluationMode: string;
-            const TaxYearCurrencyExchangeType: string;
-            const TaxYearSalesExchanceType: string;
-            const TaxYearBookingExchangeType: string;
-            const TaxYearStockEvaluationMode: string;
-            const TaxYearFinanceLockDate: string;
-            const TaxYearParallelBooking: string;
-            const TaxYearLedgerRounding: string;
-            const TaxYearSecondaryAccountAllowed: string;
-            const TaxYearBankTransactionBooking: string;
-            const TaxYearCashAccounting: string;
-            const TaxYearLedgerItemCollectorToSecondaryAccount: string;
-            const TaxYearLedgerRoundingThresholdAmount: string;
-            const TaxYearApplyFinenceLockToStock: string;
-            const TaxYearCashAccountingVatCarryOver: string;
-            const TaxYearVatOffPeriodTransfer: string;
-            const TaxYearVatRateDifferenceTransfer: string;
-            const TaxYearVoucherShortYearNumber: string;
-            const TaxYearReferenceShortYearNumber: string;
-            const AncestorAccountAvatarId: string;
-            const AncestorAccountTimestamp: string;
-            const AncestorAccountTreasuryAccountId: string;
-            const AncestorAccountTaxYearId: string;
-            const AncestorAccountAncestorAccountId: string;
-            const AncestorAccountParentAccountId: string;
             const AncestorAccountCode: string;
             const AncestorAccountPlaceholder: string;
             const AncestorAccountTaxRelated: string;
@@ -905,65 +751,20 @@ declare namespace SereneASP.Cobrademo {
             const AncestorAccountParallelAccountId: string;
             const AncestorAccountLayerId: string;
             const AncestorAccountIsPartnerExpected: string;
-            const ParentAccountAvatarId: string;
-            const ParentAccountTimestamp: string;
-            const ParentAccountTreasuryAccountId: string;
-            const ParentAccountTaxYearId: string;
-            const ParentAccountAncestorAccountId: string;
-            const ParentAccountParentAccountId: string;
             const ParentAccountCode: string;
-            const ParentAccountPlaceholder: string;
-            const ParentAccountTaxRelated: string;
-            const ParentAccountHidden: string;
-            const ParentAccountTypeId: string;
-            const ParentAccountTransactionAccountId: string;
-            const ParentAccountIsCollectorExpected: string;
-            const ParentAccountParallelAccountId: string;
-            const ParentAccountLayerId: string;
-            const ParentAccountIsPartnerExpected: string;
-            const TransactionAccountAvatarId: string;
-            const TransactionAccountTimestamp: string;
-            const TransactionAccountTreasuryAccountId: string;
-            const TransactionAccountTaxYearId: string;
-            const TransactionAccountAncestorAccountId: string;
-            const TransactionAccountParentAccountId: string;
             const TransactionAccountCode: string;
-            const TransactionAccountPlaceholder: string;
-            const TransactionAccountTaxRelated: string;
-            const TransactionAccountHidden: string;
-            const TransactionAccountTypeId: string;
-            const TransactionAccountTransactionAccountId: string;
-            const TransactionAccountIsCollectorExpected: string;
-            const TransactionAccountParallelAccountId: string;
-            const TransactionAccountLayerId: string;
-            const TransactionAccountIsPartnerExpected: string;
-            const ParallelAccountAvatarId: string;
-            const ParallelAccountTimestamp: string;
-            const ParallelAccountTreasuryAccountId: string;
-            const ParallelAccountTaxYearId: string;
-            const ParallelAccountAncestorAccountId: string;
-            const ParallelAccountParentAccountId: string;
             const ParallelAccountCode: string;
-            const ParallelAccountPlaceholder: string;
-            const ParallelAccountTaxRelated: string;
-            const ParallelAccountHidden: string;
-            const ParallelAccountTypeId: string;
-            const ParallelAccountTransactionAccountId: string;
-            const ParallelAccountIsCollectorExpected: string;
-            const ParallelAccountParallelAccountId: string;
-            const ParallelAccountLayerId: string;
-            const ParallelAccountIsPartnerExpected: string;
         }
     }
 }
 declare namespace SereneASP.Cobrademo {
     namespace AccountService {
         const baseUrl = "Cobrademo/Account";
-        function Create(request: Serenity.SaveRequest<AccountRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Update(request: Serenity.SaveRequest<AccountRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<AccountRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<AccountRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Create(request: Serenity.SaveRequest<AccountRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<AccountRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<AccountRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<AccountRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
         namespace Methods {
             const Create: string;
             const Update: string;
@@ -1067,57 +868,292 @@ declare namespace SereneASP.Cobrademo {
         const nameProperty = "FileGeneratedSign";
         const localTextPrefix = "Cobrademo.AccountSheetCore";
         namespace Fields {
-            const TaxYearId: any;
-            const LayerId: any;
-            const AccountId: any;
-            const BookingDate: any;
-            const CompletionDate: any;
-            const TabletypeId: any;
-            const FileId: any;
-            const FileAvatarId: any;
-            const FileGeneratedSign: any;
-            const FileUserSign: any;
-            const OrdinalNumber: any;
-            const SrcAvatarId: any;
-            const LedgerItemId: any;
-            const ItemTypeId: any;
-            const SrcFinanceLinkId: any;
-            const EventTypeId: any;
-            const PartnerId: any;
-            const ReferenceNumber: any;
-            const VoucherNum: any;
-            const LedgerCurrencyId: any;
-            const LedgerRate: any;
-            const LedgerName: any;
-            const LedgerItemCurrencyId: any;
-            const LedgerItemRate: any;
-            const LedgerItemName: any;
-            const Side: any;
-            const OriginalAmount: any;
-            const Amount: any;
-            const OriginalDebitAmount: any;
-            const OriginalCreditAmount: any;
-            const DebitAmount: any;
-            const CreditAmount: any;
-            const AccountCode: any;
-            const ContraAccounts: any;
-            const IsFinalized: any;
-            const IsActive: any;
-            const AccountInTaxYear: any;
-            const AccountInLayer: any;
-            const BookingDateInTaxYear: any;
-            const IsCurrent: any;
+            const TaxYearId: string;
+            const LayerId: string;
+            const AccountId: string;
+            const BookingDate: string;
+            const CompletionDate: string;
+            const TabletypeId: string;
+            const FileId: string;
+            const FileAvatarId: string;
+            const FileGeneratedSign: string;
+            const FileUserSign: string;
+            const OrdinalNumber: string;
+            const SrcAvatarId: string;
+            const LedgerItemId: string;
+            const ItemTypeId: string;
+            const SrcFinanceLinkId: string;
+            const EventTypeId: string;
+            const PartnerId: string;
+            const ReferenceNumber: string;
+            const VoucherNum: string;
+            const LedgerCurrencyId: string;
+            const LedgerRate: string;
+            const LedgerName: string;
+            const LedgerItemCurrencyId: string;
+            const LedgerItemRate: string;
+            const LedgerItemName: string;
+            const Side: string;
+            const OriginalAmount: string;
+            const Amount: string;
+            const OriginalDebitAmount: string;
+            const OriginalCreditAmount: string;
+            const DebitAmount: string;
+            const CreditAmount: string;
+            const AccountCode: string;
+            const ContraAccounts: string;
+            const IsFinalized: string;
+            const IsActive: string;
+            const AccountInTaxYear: string;
+            const AccountInLayer: string;
+            const BookingDateInTaxYear: string;
+            const IsCurrent: string;
         }
     }
 }
 declare namespace SereneASP.Cobrademo {
     namespace AccountSheetCoreService {
         const baseUrl = "Cobrademo/AccountSheetCore";
-        function Create(request: Serenity.SaveRequest<AccountSheetCoreRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Update(request: Serenity.SaveRequest<AccountSheetCoreRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<AccountSheetCoreRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<AccountSheetCoreRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<AccountSheetCoreRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<AccountSheetCoreRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        namespace Methods {
+            const Retrieve: string;
+            const List: string;
+        }
+    }
+}
+declare namespace SereneASP.Cobrademo {
+    class TaxYearForm extends Serenity.PrefixedContext {
+        static formKey: string;
+    }
+    interface TaxYearForm {
+        Timestamp: Serenity.StringEditor;
+        ParentTaxYearId: Serenity.IntegerEditor;
+        CurrencyId: Serenity.StringEditor;
+        TaxCurrencyId: Serenity.StringEditor;
+        Name: Serenity.StringEditor;
+        YearNum: Serenity.IntegerEditor;
+        StartDate: Serenity.DateEditor;
+        EndDate: Serenity.DateEditor;
+        VoucherFormat: Serenity.IntegerEditor;
+        VoucherDigits: Serenity.IntegerEditor;
+        VoucherSepFirst: Serenity.StringEditor;
+        VoucherSepLast: Serenity.StringEditor;
+        ReferenceNumFormat: Serenity.IntegerEditor;
+        ReferenceNumDigits: Serenity.IntegerEditor;
+        ReferenceNumSepFirst: Serenity.StringEditor;
+        ReferenceNumSepLast: Serenity.StringEditor;
+        IsClosed: Serenity.BooleanEditor;
+        CurrencyEvaluationMode: Serenity.IntegerEditor;
+        CurrencyExchangeType: Serenity.IntegerEditor;
+        SalesExchanceType: Serenity.IntegerEditor;
+        BookingExchangeType: Serenity.IntegerEditor;
+        StockEvaluationMode: Serenity.IntegerEditor;
+        FinanceLockDate: Serenity.DateEditor;
+        ParallelBooking: Serenity.BooleanEditor;
+        LedgerRounding: Serenity.BooleanEditor;
+        SecondaryAccountAllowed: Serenity.BooleanEditor;
+        BankTransactionBooking: Serenity.BooleanEditor;
+        CashAccounting: Serenity.BooleanEditor;
+        LedgerItemCollectorToSecondaryAccount: Serenity.BooleanEditor;
+        LedgerRoundingThresholdAmount: Serenity.DecimalEditor;
+        ApplyFinenceLockToStock: Serenity.BooleanEditor;
+        CashAccountingVatCarryOver: Serenity.BooleanEditor;
+        VatOffPeriodTransfer: Serenity.BooleanEditor;
+        VatRateDifferenceTransfer: Serenity.BooleanEditor;
+        VoucherShortYearNumber: Serenity.BooleanEditor;
+        ReferenceShortYearNumber: Serenity.BooleanEditor;
+    }
+}
+declare namespace SereneASP.Cobrademo {
+    interface TaxYearRow {
+        Id?: number;
+        Timestamp?: number[];
+        ParentTaxYearId?: number;
+        CurrencyId?: string;
+        TaxCurrencyId?: string;
+        Name?: string;
+        YearNum?: number;
+        StartDate?: string;
+        EndDate?: string;
+        VoucherFormat?: number;
+        VoucherDigits?: number;
+        VoucherSepFirst?: string;
+        VoucherSepLast?: string;
+        ReferenceNumFormat?: number;
+        ReferenceNumDigits?: number;
+        ReferenceNumSepFirst?: string;
+        ReferenceNumSepLast?: string;
+        IsClosed?: boolean;
+        CurrencyEvaluationMode?: number;
+        CurrencyExchangeType?: number;
+        SalesExchanceType?: number;
+        BookingExchangeType?: number;
+        StockEvaluationMode?: number;
+        FinanceLockDate?: string;
+        ParallelBooking?: boolean;
+        LedgerRounding?: boolean;
+        SecondaryAccountAllowed?: boolean;
+        BankTransactionBooking?: boolean;
+        CashAccounting?: boolean;
+        LedgerItemCollectorToSecondaryAccount?: boolean;
+        LedgerRoundingThresholdAmount?: number;
+        ApplyFinenceLockToStock?: boolean;
+        CashAccountingVatCarryOver?: boolean;
+        VatOffPeriodTransfer?: boolean;
+        VatRateDifferenceTransfer?: boolean;
+        VoucherShortYearNumber?: boolean;
+        ReferenceShortYearNumber?: boolean;
+        ParentTaxYearTimestamp?: number[];
+        ParentTaxYearParentTaxYearId?: number;
+        ParentTaxYearCurrencyId?: string;
+        ParentTaxYearTaxCurrencyId?: string;
+        ParentTaxYearName?: string;
+        ParentTaxYearYearNum?: number;
+        ParentTaxYearStartDate?: string;
+        ParentTaxYearEndDate?: string;
+        ParentTaxYearVoucherFormat?: number;
+        ParentTaxYearVoucherDigits?: number;
+        ParentTaxYearVoucherSepFirst?: string;
+        ParentTaxYearVoucherSepLast?: string;
+        ParentTaxYearReferenceNumFormat?: number;
+        ParentTaxYearReferenceNumDigits?: number;
+        ParentTaxYearReferenceNumSepFirst?: string;
+        ParentTaxYearReferenceNumSepLast?: string;
+        ParentTaxYearIsClosed?: boolean;
+        ParentTaxYearCurrencyEvaluationMode?: number;
+        ParentTaxYearCurrencyExchangeType?: number;
+        ParentTaxYearSalesExchanceType?: number;
+        ParentTaxYearBookingExchangeType?: number;
+        ParentTaxYearStockEvaluationMode?: number;
+        ParentTaxYearFinanceLockDate?: string;
+        ParentTaxYearParallelBooking?: boolean;
+        ParentTaxYearLedgerRounding?: boolean;
+        ParentTaxYearSecondaryAccountAllowed?: boolean;
+        ParentTaxYearBankTransactionBooking?: boolean;
+        ParentTaxYearCashAccounting?: boolean;
+        ParentTaxYearLedgerItemCollectorToSecondaryAccount?: boolean;
+        ParentTaxYearLedgerRoundingThresholdAmount?: number;
+        ParentTaxYearApplyFinenceLockToStock?: boolean;
+        ParentTaxYearCashAccountingVatCarryOver?: boolean;
+        ParentTaxYearVatOffPeriodTransfer?: boolean;
+        ParentTaxYearVatRateDifferenceTransfer?: boolean;
+        ParentTaxYearVoucherShortYearNumber?: boolean;
+        ParentTaxYearReferenceShortYearNumber?: boolean;
+        CurrencyName?: string;
+        CurrencyIsActive?: boolean;
+        CurrencyEndDate?: string;
+        CurrencyMinAmount?: number;
+        CurrencyTimestamp?: number[];
+        CurrencyAvatarId?: number;
+        TaxCurrencyName?: string;
+        TaxCurrencyIsActive?: boolean;
+        TaxCurrencyEndDate?: string;
+        TaxCurrencyMinAmount?: number;
+        TaxCurrencyTimestamp?: number[];
+        TaxCurrencyAvatarId?: number;
+    }
+    namespace TaxYearRow {
+        const idProperty = "Id";
+        const nameProperty = "CurrencyId";
+        const localTextPrefix = "Cobrademo.TaxYear";
+        namespace Fields {
+            const Id: string;
+            const Timestamp: string;
+            const ParentTaxYearId: string;
+            const CurrencyId: string;
+            const TaxCurrencyId: string;
+            const Name: string;
+            const YearNum: string;
+            const StartDate: string;
+            const EndDate: string;
+            const VoucherFormat: string;
+            const VoucherDigits: string;
+            const VoucherSepFirst: string;
+            const VoucherSepLast: string;
+            const ReferenceNumFormat: string;
+            const ReferenceNumDigits: string;
+            const ReferenceNumSepFirst: string;
+            const ReferenceNumSepLast: string;
+            const IsClosed: string;
+            const CurrencyEvaluationMode: string;
+            const CurrencyExchangeType: string;
+            const SalesExchanceType: string;
+            const BookingExchangeType: string;
+            const StockEvaluationMode: string;
+            const FinanceLockDate: string;
+            const ParallelBooking: string;
+            const LedgerRounding: string;
+            const SecondaryAccountAllowed: string;
+            const BankTransactionBooking: string;
+            const CashAccounting: string;
+            const LedgerItemCollectorToSecondaryAccount: string;
+            const LedgerRoundingThresholdAmount: string;
+            const ApplyFinenceLockToStock: string;
+            const CashAccountingVatCarryOver: string;
+            const VatOffPeriodTransfer: string;
+            const VatRateDifferenceTransfer: string;
+            const VoucherShortYearNumber: string;
+            const ReferenceShortYearNumber: string;
+            const ParentTaxYearTimestamp: string;
+            const ParentTaxYearParentTaxYearId: string;
+            const ParentTaxYearCurrencyId: string;
+            const ParentTaxYearTaxCurrencyId: string;
+            const ParentTaxYearName: string;
+            const ParentTaxYearYearNum: string;
+            const ParentTaxYearStartDate: string;
+            const ParentTaxYearEndDate: string;
+            const ParentTaxYearVoucherFormat: string;
+            const ParentTaxYearVoucherDigits: string;
+            const ParentTaxYearVoucherSepFirst: string;
+            const ParentTaxYearVoucherSepLast: string;
+            const ParentTaxYearReferenceNumFormat: string;
+            const ParentTaxYearReferenceNumDigits: string;
+            const ParentTaxYearReferenceNumSepFirst: string;
+            const ParentTaxYearReferenceNumSepLast: string;
+            const ParentTaxYearIsClosed: string;
+            const ParentTaxYearCurrencyEvaluationMode: string;
+            const ParentTaxYearCurrencyExchangeType: string;
+            const ParentTaxYearSalesExchanceType: string;
+            const ParentTaxYearBookingExchangeType: string;
+            const ParentTaxYearStockEvaluationMode: string;
+            const ParentTaxYearFinanceLockDate: string;
+            const ParentTaxYearParallelBooking: string;
+            const ParentTaxYearLedgerRounding: string;
+            const ParentTaxYearSecondaryAccountAllowed: string;
+            const ParentTaxYearBankTransactionBooking: string;
+            const ParentTaxYearCashAccounting: string;
+            const ParentTaxYearLedgerItemCollectorToSecondaryAccount: string;
+            const ParentTaxYearLedgerRoundingThresholdAmount: string;
+            const ParentTaxYearApplyFinenceLockToStock: string;
+            const ParentTaxYearCashAccountingVatCarryOver: string;
+            const ParentTaxYearVatOffPeriodTransfer: string;
+            const ParentTaxYearVatRateDifferenceTransfer: string;
+            const ParentTaxYearVoucherShortYearNumber: string;
+            const ParentTaxYearReferenceShortYearNumber: string;
+            const CurrencyName: string;
+            const CurrencyIsActive: string;
+            const CurrencyEndDate: string;
+            const CurrencyMinAmount: string;
+            const CurrencyTimestamp: string;
+            const CurrencyAvatarId: string;
+            const TaxCurrencyName: string;
+            const TaxCurrencyIsActive: string;
+            const TaxCurrencyEndDate: string;
+            const TaxCurrencyMinAmount: string;
+            const TaxCurrencyTimestamp: string;
+            const TaxCurrencyAvatarId: string;
+        }
+    }
+}
+declare namespace SereneASP.Cobrademo {
+    namespace TaxYearService {
+        const baseUrl = "Cobrademo/TaxYear";
+        function Create(request: Serenity.SaveRequest<TaxYearRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<TaxYearRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<TaxYearRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<TaxYearRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
         namespace Methods {
             const Create: string;
             const Update: string;
@@ -4444,6 +4480,43 @@ declare namespace SereneASP.Cobrademo {
         constructor(container: JQuery);
     }
 }
+declare namespace SereneASP.Cobrademo {
+    class TaxYearDialog extends Serenity.EntityDialog<TaxYearRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: TaxYearForm;
+        dialogOpen(): void;
+    }
+}
+declare namespace SereneASP.Cobrademo {
+    class TaxYearEditor extends Common.GridEditorBase<TaxYearRow> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof TaxYearEditorDialog;
+        protected getLocalTextPrefix(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace SereneASP.Cobrademo {
+    class TaxYearEditorDialog extends Common.GridEditorDialog<TaxYearRow> {
+        protected getFormKey(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected form: TaxYearForm;
+    }
+}
+declare namespace SereneASP.Cobrademo {
+    class TaxYearGrid extends Serenity.EntityGrid<TaxYearRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof TaxYearDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
 declare namespace SereneASP {
     class BasicProgressDialog extends Serenity.TemplatedDialog<any> {
         constructor();
@@ -5082,5 +5155,19 @@ declare namespace SereneASP.Organization {
         protected getLocalTextPrefix(): string;
         protected getService(): string;
         constructor(container: JQuery);
+    }
+}
+declare namespace SereneASP.Cobrademo {
+}
+declare namespace SereneASP.Cobrademo {
+}
+declare namespace SereneASP.Cobrademo {
+}
+declare namespace SereneASP.Cobrademo {
+}
+declare namespace SereneASP.Modules.Cobrademo.Account {
+    enum LayerEnum {
+        Elsodleges = 1,
+        Parhuzamos = 2,
     }
 }
