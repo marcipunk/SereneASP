@@ -14,7 +14,15 @@ namespace SereneASP.Cobrademo.Entities
     [ModifyPermission("Administration:General")]
     public sealed class AccountNameRow : Row, IIdRow, INameRow
     {
-        [DisplayName("Account"), PrimaryKey, ForeignKey("[dbo].[Account]", "Id"), LeftJoin("jAccount"), TextualField("AccountCode")]
+        [DisplayName("AccountLanguageId"), Expression("(CONVERT(varchar(max), t0.[AccountId]) + t0.LanguageId) ")]
+        public String AccountLanguageId
+        {
+            get { return Fields.AccountLanguageId[this]; }
+            //set { Fields.AccountId[this] = value; }
+        }
+
+
+        [DisplayName("AccountId"), PrimaryKey, ForeignKey("[dbo].[Account]", "Id"), LeftJoin("jAccount"), TextualField("AccountCode")]
         public Int32? AccountId
         {
             get { return Fields.AccountId[this]; }
@@ -42,12 +50,12 @@ namespace SereneASP.Cobrademo.Entities
             set { Fields.Note[this] = value; }
         }
 
-        [DisplayName("Account Avatar Id"), Expression("jAccount.[AvatarID]")]
-        public Int32? AccountAvatarId
-        {
-            get { return Fields.AccountAvatarId[this]; }
-            set { Fields.AccountAvatarId[this] = value; }
-        }
+        //[DisplayName("Account Avatar Id"), Expression("jAccount.[AvatarID]")]
+        //public Int32? AccountAvatarId
+        //{
+        //    get { return Fields.AccountAvatarId[this]; }
+        //    set { Fields.AccountAvatarId[this] = value; }
+        //}
 
         //[DisplayName("Account Timestamp"), Expression("jAccount.[timestamp]")]
         //public byte[] AccountTimestamp
@@ -170,12 +178,12 @@ namespace SereneASP.Cobrademo.Entities
 
         IIdField IIdRow.IdField
         {
-            get { return Fields.AccountId; }
+            get { return Fields.AccountLanguageId; }
         }
 
         StringField INameRow.NameField
         {
-            get { return Fields.LanguageId; }
+            get { return Fields.Value; }
         }
 
         public static readonly RowFields Fields = new RowFields().Init();
@@ -187,12 +195,13 @@ namespace SereneASP.Cobrademo.Entities
 
         public class RowFields : RowFieldsBase
         {
+            public StringField AccountLanguageId;
             public Int32Field AccountId;
             public StringField LanguageId;
             public StringField Value;
             public StringField Note;
 
-            public Int32Field AccountAvatarId;
+            //public Int32Field AccountAvatarId;
             //public ByteArrayField AccountTimestamp;
             //public Int32Field AccountTreasuryAccountId;
             public Int32Field AccountTaxYearId;

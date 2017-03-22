@@ -593,6 +593,8 @@ declare namespace SereneASP.BasicSamples {
     }
 }
 declare namespace SereneASP.Cobrademo {
+}
+declare namespace SereneASP.Cobrademo {
     class AccountForm extends Serenity.PrefixedContext {
         static formKey: string;
     }
@@ -611,6 +613,8 @@ declare namespace SereneASP.Cobrademo {
         LayerId: Serenity.EnumEditor;
         IsPartnerExpected: Serenity.BooleanEditor;
     }
+}
+declare namespace SereneASP.Cobrademo {
 }
 declare namespace SereneASP.Cobrademo {
     class AccountNameForm extends Serenity.PrefixedContext {
@@ -775,6 +779,8 @@ declare namespace SereneASP.Cobrademo {
     }
 }
 declare namespace SereneASP.Cobrademo {
+}
+declare namespace SereneASP.Cobrademo {
     class AccountSheetCoreForm extends Serenity.PrefixedContext {
         static formKey: string;
     }
@@ -921,6 +927,8 @@ declare namespace SereneASP.Cobrademo {
             const List: string;
         }
     }
+}
+declare namespace SereneASP.Cobrademo {
 }
 declare namespace SereneASP.Cobrademo {
     class TaxYearForm extends Serenity.PrefixedContext {
@@ -2048,6 +2056,12 @@ declare namespace SereneASP.Membership {
         DisplayName?: string;
         Email?: string;
         Password?: string;
+    }
+}
+declare namespace SereneASP.Modules.Cobrademo.Account {
+    enum LayerEnum {
+        Elsodleges = 1,
+        Parhuzamos = 2,
     }
 }
 declare namespace SereneASP.Northwind {
@@ -5155,19 +5169,5 @@ declare namespace SereneASP.Organization {
         protected getLocalTextPrefix(): string;
         protected getService(): string;
         constructor(container: JQuery);
-    }
-}
-declare namespace SereneASP.Cobrademo {
-}
-declare namespace SereneASP.Cobrademo {
-}
-declare namespace SereneASP.Cobrademo {
-}
-declare namespace SereneASP.Cobrademo {
-}
-declare namespace SereneASP.Modules.Cobrademo.Account {
-    enum LayerEnum {
-        Elsodleges = 1,
-        Parhuzamos = 2,
     }
 }

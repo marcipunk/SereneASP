@@ -14,9 +14,11 @@ namespace SereneASP.Cobrademo.Columns
     public class AccountNameColumns
     {
         [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
-        public Int32 AccountId { get; set; }
+        public String AccountLanguageId { get; set; }
         [EditLink]
+        public String AccountCode { get; set; }
         public String LanguageId { get; set; }
+        [EditLink]
         public String Value { get; set; }
         public String Note { get; set; }
     }

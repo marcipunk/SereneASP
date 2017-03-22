@@ -1303,6 +1303,24 @@ var SereneASP;
 })(SereneASP || (SereneASP = {}));
 var SereneASP;
 (function (SereneASP) {
+    var Modules;
+    (function (Modules) {
+        var Cobrademo;
+        (function (Cobrademo) {
+            var Account;
+            (function (Account) {
+                var LayerEnum;
+                (function (LayerEnum) {
+                    LayerEnum[LayerEnum["Elsodleges"] = 1] = "Elsodleges";
+                    LayerEnum[LayerEnum["Parhuzamos"] = 2] = "Parhuzamos";
+                })(LayerEnum = Account.LayerEnum || (Account.LayerEnum = {}));
+                Serenity.Decorators.registerEnum(LayerEnum, 'Account.LayerId');
+            })(Account = Cobrademo.Account || (Cobrademo.Account = {}));
+        })(Cobrademo = Modules.Cobrademo || (Modules.Cobrademo = {}));
+    })(Modules = SereneASP.Modules || (SereneASP.Modules = {}));
+})(SereneASP || (SereneASP = {}));
+var SereneASP;
+(function (SereneASP) {
     var Northwind;
     (function (Northwind) {
         var CategoryForm = (function (_super) {
@@ -9613,23 +9631,5 @@ var SereneASP;
         ], ContactGrid);
         Organization.ContactGrid = ContactGrid;
     })(Organization = SereneASP.Organization || (SereneASP.Organization = {}));
-})(SereneASP || (SereneASP = {}));
-var SereneASP;
-(function (SereneASP) {
-    var Modules;
-    (function (Modules) {
-        var Cobrademo;
-        (function (Cobrademo) {
-            var Account;
-            (function (Account) {
-                var LayerEnum;
-                (function (LayerEnum) {
-                    LayerEnum[LayerEnum["Elsodleges"] = 1] = "Elsodleges";
-                    LayerEnum[LayerEnum["Parhuzamos"] = 2] = "Parhuzamos";
-                })(LayerEnum = Account.LayerEnum || (Account.LayerEnum = {}));
-                Serenity.Decorators.registerEnum(LayerEnum, 'Account.LayerId');
-            })(Account = Cobrademo.Account || (Cobrademo.Account = {}));
-        })(Cobrademo = Modules.Cobrademo || (Modules.Cobrademo = {}));
-    })(Modules = SereneASP.Modules || (SereneASP.Modules = {}));
 })(SereneASP || (SereneASP = {}));
 //# sourceMappingURL=SereneASP.Web.js.map
