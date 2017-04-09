@@ -12,6 +12,7 @@ namespace SereneASP.Cobrademo.Entities
     [ConnectionKey("CobraDemo"), TableName("[dbo].[AccountName]"), DisplayName("Account Name"), InstanceName("Account Name"), TwoLevelCached]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
+    [LookupScript("CobraDemo.AccountName")]
     public sealed class AccountNameRow : Row, IIdRow, INameRow
     {
         [DisplayName("AccountLanguageId"), Expression("(CONVERT(varchar(max), t0.[AccountId]) + t0.LanguageId) ")]
@@ -29,7 +30,7 @@ namespace SereneASP.Cobrademo.Entities
             set { Fields.AccountId[this] = value; }
         }
 
-        [DisplayName("LanguageId"), Size(2), PrimaryKey, ForeignKey("[dbo].[Language]", "Id"), LeftJoin("jLanguage"), QuickSearch, TextualField("LanguageName")]
+        [DisplayName("LanguageId"), Size(2), PrimaryKey, ForeignKey("[dbo].[Language]", "Id"), LeftJoin("jLanguage"), QuickSearch, TextualField("LanguageId")]
         public String LanguageId
         {
             get { return Fields.LanguageId[this]; }

@@ -15,7 +15,7 @@ namespace SereneASP.Cobrademo.Entities
     [ModifyPermission("Administration:General")]
     public sealed class AccountRow : Row, IIdRow, INameRow
     {
-        [DisplayName("Id"), Identity]
+        [DisplayName("Id"), NotNull, Identity, ForeignKey("[dbo].[AccountName]", "AccountId"), LeftJoin ("jAccountName")]
         public Int32? Id
         {
             get { return Fields.Id[this]; }
@@ -35,6 +35,23 @@ namespace SereneASP.Cobrademo.Entities
             get { return Fields.Timestamp[this]; }
             set { Fields.Timestamp[this] = value; }
         }
+
+        [DisplayName("Account Name"), Expression("jAccountName.[Value]")]
+        [LookupEditor(typeof(AccountNameRow))]
+        public String AccountName
+        {
+            get { return Fields.AccountName[this]; }
+            set { Fields.AccountName[this] = value; }
+        }
+
+        [DisplayName("Language Id"), Expression("jAccountName.[LanguageId]")]
+        
+        public String LanguageId
+        {
+            get { return Fields.LanguageId[this]; }
+            set { Fields.LanguageId[this] = value; }
+        }
+
 
         [DisplayName("Treasury Account"), ForeignKey("[dbo].[TreasuryAccount]", "Id"), LeftJoin("jTreasuryAccount"), TextualField("TreasuryAccountNumber")]
         public Int32? TreasuryAccountId
@@ -906,6 +923,8 @@ namespace SereneASP.Cobrademo.Entities
             public Int32Field Id;
             public Int32Field AvatarId;
             public ByteArrayField Timestamp;
+            public StringField AccountName;
+            public StringField LanguageId;
             public Int32Field TreasuryAccountId;
             public Int32Field TaxYearId;
             public Int32Field AncestorAccountId;

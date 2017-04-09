@@ -19,7 +19,11 @@ namespace SereneASP.Cobrademo.Columns
         [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
         public Int32 Id { get; set; }
         [EditLink, Width(150), AlignRight]
+        [QuickFilter]
         public String Code { get; set; }
+        [QuickFilter]
+        public String AccountName { get; set; }
+        public String LanguageId { get; set; }
         //public Int32 AvatarId { get; set; }
         //public byte[] Timestamp { get; set; }
         public Int32 TreasuryAccountId { get; set; }
